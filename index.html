@@ -3,89 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>隐私政策 | Privacy Policy - 成语拼拼 (Idiom Puzzle)</title>
+    <title>隐私政策 | Privacy Policy - 成语拼拼</title>
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-primary: #1d1d1f;
-            --text-secondary: #86868b;
-            --border-color: #d2d2d7;
-            --link-color: #0066cc;
-            --table-bg-even: #f5f5f7;
-            --toggle-bg: #f5f5f7;
+            --apple-bg: #ffffff;
+            --apple-text: #1d1d1f;
+            --apple-secondary: #86868b;
+            --apple-blue: #0066cc;
+            --apple-gray: #f5f5f7;
+            --border: #d2d2d7;
         }
 
         body {
             margin: 0; padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            background-color: var(--apple-bg);
+            color: var(--apple-text);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, "PingFang SC", sans-serif;
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 导航栏与切换开关 */
+        /* 顶部语言导航 */
         nav {
             position: sticky; top: 0;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border);
             z-index: 1000;
-            padding: 10px 0;
+            height: 52px;
+            display: flex; align-items: center;
         }
 
-        .nav-container {
-            max-width: 800px; margin: 0 auto;
-            display: flex; justify-content: flex-end; padding: 0 20px;
+        .nav-content {
+            max-width: 980px; margin: 0 auto; width: 100%;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 22px;
         }
 
-        .lang-switch {
-            display: flex; background: var(--toggle-bg);
-            padding: 2px; border-radius: 8px; font-size: 13px; font-weight: 500;
+        .logo { font-weight: 600; font-size: 17px; }
+
+        .lang-toggle {
+            display: flex; background: var(--apple-gray);
+            border-radius: 980px; padding: 2px;
         }
 
         .lang-btn {
-            padding: 6px 14px; border-radius: 6px; cursor: pointer; transition: all 0.2s;
-            color: var(--text-secondary);
+            padding: 4px 16px; border-radius: 980px;
+            font-size: 12px; font-weight: 500; cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            color: var(--apple-secondary);
         }
 
         .lang-btn.active {
-            background: #fff; color: var(--text-primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff; color: var(--apple-text);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
-        /* 内容布局 */
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
-        header { margin-bottom: 40px; text-align: center; }
-        h1 { font-size: 32px; font-weight: 600; margin-bottom: 10px; }
-        .meta-info { font-size: 14px; color: var(--text-secondary); }
-        h2 { font-size: 22px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
-        h3 { font-size: 18px; font-weight: 600; margin-top: 24px; margin-bottom: 12px; }
-        p, li { margin-bottom: 16px; font-size: 16px; }
-        ul, ol { padding-left: 24px; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
-        th { background: var(--table-bg-even); font-weight: 600; }
-        .special-declaration { background: var(--table-bg-even); padding: 24px; border-radius: 12px; margin-top: 40px; }
-        footer { margin-top: 60px; text-align: center; font-size: 13px; color: var(--text-secondary); border-top: 1px solid var(--border-color); padding-top: 20px; }
+        /* 内容区域 */
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 22px 120px; }
 
-        /* 语言控制 */
+        header { margin-bottom: 60px; }
+        h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 12px; }
+        .last-updated { font-size: 17px; color: var(--apple-secondary); }
+
+        section { margin-top: 48px; }
+        h2 { font-size: 24px; font-weight: 600; margin-bottom: 20px; padding-top: 20px; border-top: 1px solid var(--border); }
+        h3 { font-size: 19px; font-weight: 600; margin-top: 32px; margin-bottom: 12px; }
+        
+        p, li { font-size: 17px; color: #333; margin-bottom: 1.2em; }
+        ul, ol { margin-bottom: 24px; }
+        
+        .box { background: var(--apple-gray); padding: 24px; border-radius: 18px; margin: 24px 0; }
+        .box p:last-child { margin-bottom: 0; }
+
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+        th, td { padding: 16px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--apple-gray); font-weight: 600; }
+
+        a { color: var(--apple-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--border); font-size: 12px; color: var(--apple-secondary); }
+
+        /* 国际化控制 */
         [lang="zh"] .en, [lang="en"] .zh { display: none; }
 
-        @media (max-width: 768px) {
-            h1 { font-size: 26px; }
-            .container { padding-top: 20px; }
+        @media (max-width: 734px) {
+            h1 { font-size: 32px; }
+            h2 { font-size: 21px; }
+            section { margin-top: 36px; }
         }
     </style>
 </head>
 <body lang="zh">
 
 <nav>
-    <div class="nav-container">
-        <div class="lang-switch">
-            <div class="lang-btn active" onclick="setLang('zh')">中文</div>
-            <div class="lang-btn" onclick="setLang('en')">English</div>
+    <div class="nav-content">
+        <div class="logo zh">成语拼拼</div>
+        <div class="logo en">Idiom Puzzle</div>
+        <div class="lang-toggle">
+            <div class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</div>
+            <div class="lang-btn" id="btn-en" onclick="setLanguage('en')">English</div>
         </div>
     </div>
 </nav>
@@ -94,106 +113,114 @@
     <header>
         <h1 class="zh">隐私政策</h1>
         <h1 class="en">Privacy Policy</h1>
-        <div class="meta-info">
-            <p class="zh">生效日期：2026年4月19日 | 版本：1.0</p>
-            <p class="en">Effective Date: April 19, 2026 | Version: 1.0</p>
-        </div>
+        <p class="last-updated zh">生效日期：2026年4月19日 | 版本：1.1</p>
+        <p class="last-updated en">Effective Date: April 19, 2026 | Version: 1.1</p>
     </header>
 
-    <section>
-        <h2 class="zh">引言</h2>
-        <h2 class="en">Introduction</h2>
-        <p class="zh">欢迎使用「成语拼拼」！我们非常重视保护您的个人信息和隐私。本隐私政策旨在向您说明我们如何收集、使用、存储和保护您的信息。</p>
-        <p class="en">Welcome to "Idiom Puzzle"! We value your personal information and privacy. This policy explains how we collect, use, store, and protect your information.</p>
-    </section>
+    <div class="box">
+        <p class="zh">「成语拼拼」致力于保护您的隐私。本应用采用<b>“隐私至上”</b>的设计理念，您的绝大部分数据均保存在您的本地设备上。我们不会出售您的数据，也不会将数据用于广告精准投放。</p>
+        <p class="en">"Idiom Puzzle" is committed to protecting your privacy. We adopt a <b>"Privacy First"</b> design—most of your data stays on your local device. We do not sell your data or use it for targeted advertising.</p>
+    </div>
 
     <section>
-        <h2 class="zh">一、我们收集的信息</h2>
-        <h2 class="en">1. Information We Collect</h2>
+        <h2 class="zh">一、我们如何收集和使用信息</h2>
+        <h2 class="en">1. How We Collect and Use Information</h2>
         
-        <h3 class="zh">1.1 您主动提供的信息</h3>
-        <h3 class="en">1.1 Information You Provide</h3>
-        <ul>
-            <li class="zh"><strong>学习进度数据</strong>：您的关卡进度、通关记录等。</li>
-            <li class="en"><strong>Learning Progress</strong>: Your level progress and completion records.</li>
-            <li class="zh"><strong>设置偏好</strong>：音效开关等个性化配置。</li>
-            <li class="en"><strong>Preferences</strong>: Personalized settings like sound effects.</li>
-        </ul>
+        <h3 class="zh">1.1 您主动提供的数据</h3>
+        <h3 class="en">1.1 Data You Provide</h3>
+        <p class="zh">包括游戏进度、解锁状态及应用内偏好设置。这些数据存储在您的设备中（如 iOS 的 UserDefaults），用于维持游戏体验的连续性。</p>
+        <p class="en">Includes game progress, unlock status, and in-app preferences. This data is stored locally (e.g., iOS UserDefaults) to maintain a seamless user experience.</p>
 
-        <h3 class="zh">1.2 自动收集的信息</h3>
-        <h3 class="en">1.2 Automatically Collected Information</h3>
-        <p class="zh">本应用为<strong>离线本地学习</strong>，不收集地理位置、设备标识等。仅收集：设备类型、系统版本、崩溃日志。</p>
-        <p class="en">This app is an <strong>offline local learning tool</strong>. We do not collect location or device IDs. We only collect: device type, OS version, and crash logs.</p>
+        <h3 class="zh">1.2 自动收集的技术信息</h3>
+        <h3 class="en">1.2 Automatically Collected Technical Information</h3>
+        <p class="zh">为优化兼容性，应用可能会读取您的设备型号、系统版本号及崩溃日志。这些信息通常是去中心化的、匿名的，仅用于故障排除。</p>
+        <p class="en">To optimize compatibility, the app may read your device model, OS version, and crash logs. This information is typically decentralized and anonymous, used solely for troubleshooting.</p>
     </section>
 
     <section>
-        <h2 class="zh">二、我们如何使用信息</h2>
-        <h2 class="en">2. How We Use Information</h2>
-        <ol>
-            <li class="zh">提供并保存您的本地学习进度。</li>
-            <li class="en">To provide and save your local learning progress.</li>
-            <li class="zh">优化应用性能及改进用户体验。</li>
-            <li class="en">To optimize app performance and improve user experience.</li>
-        </ol>
-    </section>
-
-    <section>
-        <h2 class="zh">三、信息的存储与保护</h2>
-        <h2 class="en">3. Storage and Protection</h2>
-        <p class="zh">您的所有数据均<strong>存储在您的设备本地</strong>。我们不会将信息上传至服务器。您可以通过卸载应用永久删除数据。</p>
-        <p class="en">All your data is <strong>stored locally on your device</strong>. We do not upload information to any server. You can permanently delete data by uninstalling the app.</p>
-    </section>
-
-    <section>
-        <h2 class="zh">四、权限使用说明</h2>
-        <h2 class="en">4. Permissions</h2>
+        <h2 class="zh">二、权限使用说明</h2>
+        <h2 class="en">2. Permission Usage</h2>
         <table>
             <thead>
                 <tr>
-                    <th class="zh">权限</th><th class="en">Permission</th>
-                    <th class="zh">用途</th><th class="en">Purpose</th>
+                    <th class="zh">权限名称</th><th class="en">Permission</th>
+                    <th class="zh">使用目的</th><th class="en">Purpose</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Speech Synthesis</td>
-                    <td class="zh">朗读匹配的成语</td><td class="en">Reading idioms aloud</td>
+                    <td class="zh">语音合成</td><td class="en">Speech Synthesis</td>
+                    <td class="zh">调用系统原生引擎朗读成语</td><td class="en">Native TTS for reading idioms</td>
                 </tr>
             </tbody>
         </table>
+        <p class="zh">我们不请求联系人、相册、地理位置或麦克风等敏感隐私权限。</p>
+        <p class="en">We do not request sensitive permissions such as Contacts, Photos, Location, or Microphone.</p>
     </section>
 
     <section>
-        <h2 class="zh">五、儿童隐私</h2>
-        <h2 class="en">5. Children's Privacy</h2>
-        <p class="zh">本应用不收集任何可识别个人身份的信息，适合全年龄段（包括13岁以下儿童）安全使用。</p>
-        <p class="en">This app does not collect any personally identifiable information and is safe for all ages, including children under 13.</p>
+        <h2 class="zh">三、数据存储与安全性</h2>
+        <h2 class="en">3. Data Storage and Security</h2>
+        <p class="zh"><b>本地化：</b>您的所有学习记录均存储在设备沙盒内。这意味着如果您卸载应用，相关本地数据将一并被系统删除。</p>
+        <p class="en"><b>Localization:</b> All your records are stored within the device sandbox. Uninstalling the app will trigger the system to delete all associated local data.</p>
+        <p class="zh"><b>无服务器传输：</b>本应用不设后台服务器，不进行任何云端同步或个人敏感数据的网络传输。</p>
+        <p class="en"><b>No Server Transfer:</b> This app has no backend server and performs no cloud synchronization or network transfer of sensitive personal data.</p>
     </section>
 
     <section>
-        <h2 class="zh">联系我们</h2>
-        <h2 class="en">Contact Us</h2>
-        <p class="zh">如有疑问，请通过邮件联系：<a href="mailto:fanzrb@gmail.com">fanzrb@gmail.com</a></p>
-        <p class="en">For questions, contact us at: <a href="mailto:fanzrb@gmail.com">fanzrb@gmail.com</a></p>
+        <h2 class="zh">四、第三方共享</h2>
+        <h2 class="en">4. Third-Party Sharing</h2>
+        <p class="zh">我们<b>不接入</b>任何第三方广告 SDK（如 AdMob）或行为追踪工具（如 Google Analytics）。我们不向任何第三方公司共享、租用或出售您的信息。</p>
+        <p class="en">We <b>do not integrate</b> any third-party ad SDKs (e.g., AdMob) or tracking tools (e.g., Google Analytics). We do not share, rent, or sell your info to third parties.</p>
+    </section>
+
+    <section>
+        <h2 class="zh">五、儿童隐私特别保护</h2>
+        <h2 class="en">5. Special Protection for Children</h2>
+        <p class="zh">本应用符合儿童应用隐私规范。我们不收集儿童的任何个人身份信息。我们鼓励家长陪同孩子学习，并建议家长利用系统内置的“屏幕使用时间”功能管理孩子的游戏时间。</p>
+        <p class="en">This app complies with privacy standards for children's apps. We do not collect PII from children. We encourage parental guidance and recommend using "Screen Time" to manage usage.</p>
+    </section>
+
+    <section>
+        <h2 class="zh">六、您的权利</h2>
+        <h2 class="en">6. Your Rights</h2>
+        <p class="zh">您拥有对本地数据的绝对控制权。您可以通过以下操作行使权利：</p>
+        <p class="en">You have absolute control over your local data. You may exercise your rights by:</p>
+        <ul>
+            <li class="zh"><b>重置/删除：</b>在应用设置中重置进度，或通过卸载应用删除所有数据。</li>
+            <li class="en"><b>Reset/Delete:</b> Resetting progress in settings or uninstalling the app to delete all data.</li>
+            <li class="zh"><b>拒绝授权：</b>在系统设置中撤回对语音功能的使用许可。</li>
+            <li class="en"><b>Withdraw Consent:</b> Revoking speech synthesis permissions in system settings.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="zh">七、联系我们</h2>
+        <h2 class="en">7. Contact Us</h2>
+        <p>Email: <a href="mailto:fanzrb@gmail.com">fanzrb@gmail.com</a></p>
     </section>
 
     <footer>
-        <p>© 2026 Idiom Puzzle (成语拼拼). All Rights Reserved.</p>
+        <p>© 2026 Chengyupinpin 版权所有</p>
     </footer>
 </div>
 
 <script>
-    function setLang(lang) {
+    function setLanguage(lang) {
         document.body.setAttribute('lang', lang);
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.innerText.toLowerCase().includes(lang === 'zh' ? '中' : 'eng'));
-        });
-        localStorage.setItem('preferredLang', lang);
+        document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        localStorage.setItem('idiom_puzzle_lang', lang);
     }
 
-    // 自动检测并设置语言
-    const savedLang = localStorage.getItem('preferredLang') || (navigator.language.startsWith('zh') ? 'zh' : 'en');
-    setLang(savedLang);
+    // 默认语言检测
+    const savedLang = localStorage.getItem('idiom_puzzle_lang');
+    if (savedLang) {
+        setLanguage(savedLang);
+    } else {
+        const userLang = navigator.language || navigator.userLanguage;
+        setLanguage(userLang.includes('zh') ? 'zh' : 'en');
+    }
 </script>
 
 </body>
